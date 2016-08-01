@@ -20,11 +20,11 @@ function coinCounter(input) {
 			input = (input - (coinPurse.pennies * 0.01));
 		}
 	console.log(coinPurse);
-	printPurse.innerHTML += "<div>" + "You have " + coinPurse.quarters + "quarters." + "</div>";
-	printPurse.innerHTML += "<div>" + "You have " + coinPurse.dimes + "dimes." + "</div>";
-	printPurse.innerHTML += "<div>" + "You have " + coinPurse.nickels + "nickels." + "</div>";
-	printPurse.innerHTML += "<div>" + "You have " + coinPurse.pennies + "pennies." + "</div>";
+	printPurse.innerHTML += "<div>" + "You have " + coinPurse.quarters + " quarters." + "</div>";
+	printPurse.innerHTML += "<div>" + "You have " + coinPurse.dimes + " dimes." + "</div>";
+	printPurse.innerHTML += "<div>" + "You have " + coinPurse.nickels + " nickels." + "</div>";
+	printPurse.innerHTML += "<div>" + "You have " + coinPurse.pennies + " pennies." + "</div>";
 	return coinPurse;
 }
-var coins = userCoins.innerHTML;
+var coins = prompt("Enter a dollar amount. Like 4.99");
 coinCounter(coins);
