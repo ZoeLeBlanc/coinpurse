@@ -1,22 +1,22 @@
 
 var printPurse = document.getElementById("coinPurse");
-var userCoins = document.getElementById("userCoins");
+//var userCoins = document.getElementById("userCoins");
 function coinCounter(input) {
 	var coinPurse = {};
 		if(input % 0.25) {
-			coinPurse.quarters = Math.floor(input/0.25);
+			coinPurse.quarters = parseInt(input/0.25);
 			input = (input - (coinPurse.quarters * 0.25));
 		}
 		if (input % 0.1) {
-			coinPurse.dimes = Math.floor(input/0.1);
+			coinPurse.dimes = parseInt(input/0.1);
 			input = (input - (coinPurse.dimes * 0.1));
 		} 
 		if (input % 0.05) {
-			coinPurse.nickels = Math.floor(input/0.05);
+			coinPurse.nickels = parseInt(input/0.05);
 			input = (input - (coinPurse.nickels * 0.05));
 		}
 		if (input % 0.01) {
-			coinPurse.pennies = Math.floor(input/0.01);
+			coinPurse.pennies = parseInt(input/0.01);
 			input = (input - (coinPurse.pennies * 0.01));
 		}
 	console.log(coinPurse);
