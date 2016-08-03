@@ -9,20 +9,35 @@
   }
 
 */
+var printPurse = document.getElementById("coinPurse");
+var userCoins = document.getElementById("userCoins");
 
-function coinCounter () {
+function coinCounter (input) {
   // Initialize a JavaScript object to hold the coins
-  var coinPurse = {
-    quarters: 25,
-    dimes: 10,
-    nickels: 5,
-    pennies: 1,
-  };
-
-  coinPurse.quarters = 0;
-
+  var coinPurse = { };
+    if(input % 0.25) {
+      coinPurse.quarters = Math.floor(input/0.25);
+      input = (input - (coinPurse.quarters * 0.25));
+    }
+    if (input % 0.1) {
+      coinPurse.dimes = Math.floor(input/0.1);
+      input = (input - (coinPurse.dimes * 0.1));
+    } 
+    if (input % 0.05) {
+      coinPurse.nickels = Math.floor(input/0.05);
+      input = (input - (coinPurse.nickels * 0.05));
+    }
+    if (input % 0.01) {
+      coinPurse.pennies = Math.floor(input/0.01);
+      input = (input - (coinPurse.pennies * 0.01));
+    }
+  console.log(coinPurse);
+  printPurse.innerHTML += "<div>" + "You have " + coinPurse.quarters + "quarters." + "</div>";
+  printPurse.innerHTML += "<div>" + "You have " + coinPurse.dimes + "dimes." + "</div>";
+  printPurse.innerHTML += "<div>" + "You have " + coinPurse.nickels + "nickels." + "</div>";
+  printPurse.innerHTML += "<div>" + "You have " + coinPurse.pennies + "pennies." + "</div>";
   return coinPurse;
 }
 
-var coins = coinCounter()
-console.log();
+var coins = userCoins.innerHTML;
+coinCounter(coins);
