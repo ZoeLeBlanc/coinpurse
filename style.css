@@ -1,0 +1,12 @@
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: sans-serif;
+}
+
+.input {
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	flex-direction: row;
+}
