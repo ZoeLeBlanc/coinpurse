@@ -1,5 +1,3 @@
-
-
 /*
   Input: 0.67
   Output:
